@@ -218,7 +218,7 @@ button,
 a.button {
   display: inline-block;
   background-color: transparent;
-  border: 3px dashed var(--color-links);
+  border: 2.5px dashed var(--color-links);
   border-radius: 73px;
   color: black;
   padding: 0.75em 1em;
@@ -240,7 +240,7 @@ a.button {
 
 button.alt,
 a.button.alt {
-  background-color: transparent;
+  background-color: grey;
   border: 1px solid var(--color-links);
   color: var(--color-links);
 }
@@ -669,8 +669,13 @@ section {
       grid-column: 3 / 6;
       grid-row: 1 / 2;
 
+      h2 {
+        font-size: 1.5em;
+      }
+
       p {
         padding-left: 2em;
+        font-size: .7em;
       }
     }
 
@@ -688,7 +693,7 @@ section {
 
     .imagebox2::after {
       content: "";
-      background-image: url('../img/about-left-bckg2.svg');
+      background-image: url('../img/about-left-bckg-v4.svg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: right bottom;
@@ -786,28 +791,14 @@ section {
 @media (width >=768px) {
 
   .client-container {
-    background-image: url(../img/client-bckg.svg);
+    max-width: 1600px;
+    margin-inline: auto;
+    padding-inline: 4em;
+    background-image: url(../img/client-bckg-v3.svg);
     background-repeat: no-repeat;
-    background-position: -10% 80%;
-    background-size: 100vw;
-    overflow: visible;
+    background-position: -10% 6%;
+    background-size: 100%;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
@@ -885,23 +876,89 @@ section {
 
 /* Site Footer thing */
 
-.site-footer {
-  background-image: url(..);
-  background-repeat: no-repeat;
-  background-position: -10% 80%;
-  background-size: 100vw;
-  overflow: visible;
-}
+@media (width >=768px) {
 
-.site-footer h1 {
-  text-align: left;
-  padding-inline: -2em;
-  font-size: 5em;
-}
+  .footer-line {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
-.site-footer .button {
-  display: block;
-  width: fit-content;
-  margin-inline: auto;
-  margin-top: .09em;
+  /* ── OUTER FOOTER ── */
+  .footer {
+    width: 100%;
+    background: #fff;
+    color: #111;
+    padding: 60px 0 48px;
+  }
+
+  .footer-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+
+  /* ── LEFT 1/3 WITH LETS WORK  ── */
+  .footer-col-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+  }
+
+  /* ── MIDDLE 1/3 ARROW & LINKS ── */
+  .footer-col-mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 32px;
+  }
+
+  .arrow-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  /* ── SMALLER DIV GRID ── */
+  .footer-inner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    padding-top: 30px;
+    gap: 8px;
+    bottom: 0;
+  }
+
+  .inner-col-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .inner-col-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .inner-col-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  /* ── RIGHT 1/3 EMAIL BUTTON ── */
+  .footer-col-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 48px;
+  }
+
 }
